@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BoardComponent } from './board/board.component';
 import { ColumnComponent } from './column/column.component';
+import { NoteComponent } from './note/note.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    ColumnComponent
+    ColumnComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule
