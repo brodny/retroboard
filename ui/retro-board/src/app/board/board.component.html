@@ -1,2 +1,4 @@
 <p>Board: {{board | json}}</p>
-<p *ngFor="let column of columns">{{column | json}}</p>
+<div *ngFor="let column of columns">
+    <app-column [column]="column"></app-column>
+</div>

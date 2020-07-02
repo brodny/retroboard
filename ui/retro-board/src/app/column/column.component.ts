@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Column } from '../model/column';
 
 @Component({
   selector: 'app-column',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./column.component.less']
 })
 export class ColumnComponent implements OnInit {
+
+  @Input() column: Column;
 
   constructor() { }
 
