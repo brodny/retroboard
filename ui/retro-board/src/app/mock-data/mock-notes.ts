@@ -1,8 +1,8 @@
-import { Note } from "../model/note";
+import { Note } from '../model/note';
 
 const Column1Notes: Note[] = [
-    { id: 1, contents: 'Everything\'s finished', order: 1, votes: 1, },
-    { id: 2, contents: 'Good communication', order: 2, votes: 5, },
+    { id: 1, contents: 'Everything\'s finished', order: 2, votes: 1, },
+    { id: 2, contents: 'Good communication', order: 1, votes: 5, },
     { id: 3, contents: 'Time to self-development', order: 3, votes: 0, },
 ];
 
@@ -12,8 +12,8 @@ const Column2Notes: Note[] = [
 ];
 
 const Column3Notes: Note[] = [
-    { id: 21, contents: 'PM to provide some time to self-development', order: 1, votes: 1, },
-    { id: 22, contents: 'Do not commit to not signed-off stories', order: 2, votes: 5, },
+    { id: 21, contents: 'PM to provide some time to self-development', order: 2, votes: 1, },
+    { id: 22, contents: 'Do not commit to not signed-off stories', order: 1, votes: 5, },
 ];
 
 const Column11Notes: Note[] = [
@@ -22,8 +22,8 @@ const Column11Notes: Note[] = [
 ];
 
 const Column12Notes: Note[] = [
-    { id: 111, contents: 'Write down all the assumptions', order: 1, votes: 2, },
-    { id: 112, contents: 'Proof of concept first, commitment later!', order: 2, votes: 6, },
+    { id: 111, contents: 'Write down all the assumptions', order: 2, votes: 2, },
+    { id: 112, contents: 'Proof of concept first, commitment later!', order: 1, votes: 6, },
 ];
 
 const Column13Notes: Note[] = [

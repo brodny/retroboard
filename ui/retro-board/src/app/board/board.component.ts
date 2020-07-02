@@ -33,7 +33,8 @@ export class BoardComponent implements OnInit {
   }
 
   private loadBoardColumns(boardId: number): void {
-    this.columnService.getColumnsForBoard(boardId).subscribe(columns => this.columns = columns);
+    this.columnService.getColumnsForBoard(boardId).subscribe(columns =>
+      this.columns = columns.sort((a, b) => a.order - b.order));
   }
 
 }

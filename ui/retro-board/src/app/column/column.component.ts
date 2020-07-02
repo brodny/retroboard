@@ -22,7 +22,8 @@ export class ColumnComponent implements OnInit {
   }
 
   private loadNotesForColumn(columnId: number): void {
-    this.noteService.getNotesForColumn(columnId).subscribe(notes => this.notes = notes);
+    this.noteService.getNotesForColumn(columnId).subscribe(notes =>
+      this.notes = notes.sort((a, b) => a.order - b.order));
   }
 
 }
