@@ -1,2 +1,4 @@
 <p>Column: {{column | json}}</p>
-<p *ngFor="let note of notes">{{note | json}}</p>
+<div class="note-container" *ngFor="let note of notes">
+    <app-note [note]="note"></app-note>
+</div>
