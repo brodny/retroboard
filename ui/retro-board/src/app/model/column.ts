@@ -1,5 +1,5 @@
 export interface Column {
-    id: string;
+    id: number;
     name: string;
     order: number;
 }
