@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { BoardService } from '../services/board.service';
 import { Board } from '../model/board';
 
+import { ColumnService } from '../services/column.service';
+import { Column } from '../model/column';
+
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -11,15 +14,26 @@ import { Board } from '../model/board';
 export class BoardComponent implements OnInit {
 
   board: Board;
+  columns: Column[];
 
-  constructor(private boardService: BoardService) { }
+  constructor(private boardService: BoardService,
+              private columnService: ColumnService) { }
 
   ngOnInit(): void {
-    this.loadBoard(1);
+    this.loadBoardData(1);
   }
 
-  private loadBoard(id: number): void {
-    this.boardService.getBoard(id).subscribe(board => this.board = board);
+  private loadBoardData(boardId: number): void {
+    this.loadBoard(boardId);
+    this.loadBoardColumns(boardId);
+  }
+
+  private loadBoard(boardId: number): void {
+    this.boardService.getBoard(boardId).subscribe(board => this.board = board);
+  }
+
+  private loadBoardColumns(boardId: number): void {
+    this.columnService.getColumnsForBoard(boardId).subscribe(columns => this.columns = columns);
   }
 
 }
