@@ -1,7 +1,7 @@
- <!-- <div *ngFor="let note of notes">
-     <div class="note-container">
-        <app-note [note]="note"></app-note>
-     </div>
-</div> -->
+<div>
+    {{column.name}}
+</div>
 
-<app-note *ngFor="let note of notes" [note]="note"></app-note>
+<div fxLayout="column" fxLayoutAlign="space-around stretch">
+    <app-note *ngFor="let note of notes" [note]="note"></app-note>
+</div>

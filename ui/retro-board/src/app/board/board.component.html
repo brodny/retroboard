@@ -1,11 +1,5 @@
 <h2>{{board.name}}</h2>
 
-<mat-grid-list cols="{{columns.length}}" rowHeight="2:1">
-    <mat-grid-tile *ngFor="let column of columns">
-        <mat-grid-tile-header>
-            {{column.name}}
-        </mat-grid-tile-header>
-
-        <app-column [column]="column"></app-column>
-    </mat-grid-tile>
-</mat-grid-list>
+<div fxLayout="row" fxLayoutAlign="space-around stretch">
+    <app-column *ngFor="let column of columns" [column]="column"></app-column>
+</div>
