@@ -1,5 +1,11 @@
 <h2>{{board.name}}</h2>
 
-<div class="column-container" *ngFor="let column of columns">
-    <app-column [column]="column"></app-column>
-</div>
+<mat-grid-list cols="{{columns.length}}" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let column of columns">
+        <mat-grid-tile-header>
+            {{column.name}}
+        </mat-grid-tile-header>
+
+        <app-column [column]="column"></app-column>
+    </mat-grid-tile>
+</mat-grid-list>
